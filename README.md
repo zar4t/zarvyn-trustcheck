@@ -2,10 +2,10 @@
 
 Turn intended GitHub → AWS trust boundaries into repeatable regression scenarios.
 
-**v0.1.0 — experimental offline prototype.** No AWS credentials, network calls,
+**v0.1.0 experimental offline prototype.** No AWS credentials, network calls,
 telemetry, runtime dependencies or automatic remediation.
 
-## Quick start — Python 3.10+
+## Quick start Python 3.10+
 
 ### Install on Linux / WSL
 
