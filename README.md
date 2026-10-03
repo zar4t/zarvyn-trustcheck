@@ -96,7 +96,8 @@ results. It complements AWS Access Analyzer and workflow scanners such as zizmor
 .github/workflows/test.yml uses a Python 3.10 / 3.12 matrix and runs tests and the example contract without AWS secrets
 or id-token permissions. Point the CLI at your own version-controlled inputs to
 gate policy changes. Do not hide nonzero exits with continue-on-error or `|| true`.
-The bundled workflow has been inspected locally but not executed on GitHub yet.
+The bundled workflow passed on GitHub for the initial commit. Check the current
+run status at https://github.com/zar4t/zarvyn-trustcheck/actions.
 
 ## Portfolio and roadmap
 
@@ -107,7 +108,8 @@ tests before presenting it as engineering work you understand.
 
 Next: independent review and AWS sandbox comparisons, feedback from actual users,
 workflow parsing, optional read-only imports, and before/after policy comparison.
-No GitHub repository or package has been published by this delivery.
+Source repository: https://github.com/zar4t/zarvyn-trustcheck
+No package has been published on PyPI.
 
 ## References
 
