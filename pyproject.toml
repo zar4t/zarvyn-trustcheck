@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zarvyn-trustcheck"
+version = "0.1.0"
+description = "Offline regression scenarios for a limited subset of GitHub OIDC AWS trust policies"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+readme = "README.md"
+dependencies = []
+
+[project.scripts]
+zarvyn-trustcheck = "trustcheck.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["trustcheck*"]

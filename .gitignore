@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+# Local credentials and private keys
+.aws/
+.ssh/
+.netrc
+.pypirc
+credentials
+credentials.json
+credentials.*.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.tfstate*

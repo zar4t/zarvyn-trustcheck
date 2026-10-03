@@ -1,0 +1,45 @@
+{
+  "provider": "arn:aws:iam::123456789012:oidc-provider/token.actions.githubusercontent.com",
+  "scenarios": [
+    {
+      "name": "Production environment",
+      "claims": {
+        "sub": "repo:example/service:environment:production",
+        "aud": "sts.amazonaws.com"
+      },
+      "expect": "ALLOW"
+    },
+    {
+      "name": "Feature branch",
+      "claims": {
+        "sub": "repo:example/service:ref:refs/heads/feature",
+        "aud": "sts.amazonaws.com"
+      },
+      "expect": "DENY"
+    },
+    {
+      "name": "Pull request context",
+      "claims": {
+        "sub": "repo:example/service:pull_request",
+        "aud": "sts.amazonaws.com"
+      },
+      "expect": "DENY"
+    },
+    {
+      "name": "Other repository",
+      "claims": {
+        "sub": "repo:example/other:environment:production",
+        "aud": "sts.amazonaws.com"
+      },
+      "expect": "DENY"
+    },
+    {
+      "name": "Wrong audience",
+      "claims": {
+        "sub": "repo:example/service:environment:production",
+        "aud": "unexpected"
+      },
+      "expect": "DENY"
+    }
+  ]
+}
